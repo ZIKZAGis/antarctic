@@ -1,3 +1,7 @@
+.header {
+  flex: 0 0 auto;
+}
+
 .header__wrapper {
   min-height: 650px;
   background: center / cover no-repeat url("../img/greeting_bg.jpg") $darkbg;
@@ -61,24 +65,19 @@
   }
 }
 
-.header__item {
-  margin: 8px 17px;
-
-  @include vp-1366 {
-    margin: 0 11px;
-  }
-}
-
 .header__link {
+  display: block;
   font-family: $ff-medium;
   font-size: 16px;
   line-height: 20px;
   color: $white;
   text-decoration: none;
+  padding: 8px 17px;
 
   @include vp-1366 {
     font-size: 14px;
     line-height: 17px;
+    padding: 5px 11px;
   }
 }
 
