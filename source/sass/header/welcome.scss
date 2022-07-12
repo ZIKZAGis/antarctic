@@ -1,0 +1,48 @@
+.welcome {
+  color: $white;
+  padding: 95px;
+
+  @include vp-1366 {
+    padding: 0;
+  }
+}
+
+.welcome__title {
+  font-family: $ff-bold;
+  font-size: 54px;
+  line-height: 66px;
+  text-shadow: 0 4px 4px $dark;
+  margin: 0 0 10px;
+
+  @include vp-1366 {
+    font-size: 50px;
+    line-height: 61px;
+    text-shadow: none;
+    margin-bottom: 15px;
+  }
+
+  @include vp-768 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.welcome__postscript {
+  font-family: $ff-regular;
+  font-size: 15px;
+  line-height: 25px;
+  text-shadow: 0 4px 4px $dark;
+  margin: 0;
+
+  @include vp-1366 {
+    font-size: 18px;
+    line-height: 22px;
+    text-shadow: none;
+  }
+
+  @include vp-768 {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 230px;
+  }
+}
