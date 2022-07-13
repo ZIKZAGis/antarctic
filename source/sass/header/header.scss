@@ -52,12 +52,13 @@
   flex-wrap: wrap;
   max-width: 1024px;
   list-style: none;
-  margin: 0 -17px 0;
+  column-gap: 33px;
+  margin: 0;
   padding: 0;
 
   @include vp-1366 {
+    column-gap: 23px;
     max-width: 610px;
-    margin-right: -11px;
   }
 
   @include vp-768 {

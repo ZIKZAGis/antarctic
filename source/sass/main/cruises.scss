@@ -1,0 +1,139 @@
+.cruises__wrapper {
+  padding: 120px 15px;
+  color: $white;
+
+  @include vp-1366 {
+    padding: 100px 15px;
+  }
+
+  @include vp-768 {
+    padding: 65px 10px;
+  }
+}
+
+.cruises__block-title {
+  font-family: $ff-semibold;
+  font-size: 28px;
+  line-height: 42px;
+  color: $dark;
+  text-align: center;
+  margin: 0 0 50px;
+
+  @include vp-1366 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-768 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.cruises__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cruises__item {
+  position: relative;
+  background-color: $dark;
+  height: 386px;
+}
+
+.cruises__cover {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    background-image: linear-gradient(to top, $dark, transparent, transparent);
+  }
+}
+
+.cruises__image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.cruises__title {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-family: $ff-medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.cruises__info {
+  display: none;
+}
+
+.cruises__item:hover {
+  .cruises__info {
+    display: block;
+    padding: 70px 25px 35px;
+  }
+
+  .cruises__title {
+    left: 25px;
+    top: 35px;
+  }
+
+  .cruises__cover {
+    display: none;
+  }
+}
+
+.cruises__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.cruises__subtitle {
+  font-family: $ff-medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+}
+
+.cruises__text-info {
+  font-family: $ff-regular;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cruises__button {
+  display: block;
+  font-family: $ff-semibold;
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  color: $dark;
+  background-color: $white;
+  border: none;
+  padding: 14px;
+}
