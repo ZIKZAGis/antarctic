@@ -1,5 +1,9 @@
 .booking {
   background: 0 -20px / cover no-repeat url("../img/form_bg.jpg");
+
+  @include vp-1366 {
+    background-position: center;
+  }
 }
 
 .booking__wrapper {
@@ -9,7 +13,8 @@
   padding: 50px 60px;
 
   @include vp-1366 {
-    padding: 100px 50px;
+    padding: 90px 50px;
+    flex-direction: column;
   }
 
   @include vp-768 {
@@ -22,8 +27,13 @@
   color: $dark;
 
   @include vp-1366 {
+    max-width: 420px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 46px;
+  }
+
+  @include vp-768 {
+    margin-bottom: 30px;
   }
 }
 
@@ -53,6 +63,7 @@
   @include vp-768 {
     font-size: 16px;
     line-height: 22px;
+    padding: 0 20px;
   }
 }
 
@@ -70,6 +81,7 @@
   @include vp-768 {
     width: 290px;
     min-height: 460px;
+    padding: 30px;
   }
 }
 
@@ -79,6 +91,10 @@
   line-height: 27px;
   margin: 0 0 10px;
   max-width: 360px;
+
+  @include vp-1366 {
+    margin-bottom: 20px;
+  }
 
   @include vp-768 {
     line-height: 25px;
@@ -110,7 +126,11 @@
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  @include vp-1366 {
+    padding: 13px 16px 14px;
   }
 }
 
@@ -128,8 +148,13 @@
   background-color: $white;
 }
 
-.booking__input-checkbox:checked + .booking__checkbox-mark {
-  background-color: red;
+.booking__input-checkbox:checked + .booking__checkbox-mark::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: center no-repeat url("../img/check_mark.svg");
 }
 
 .booking__agreement {
@@ -137,6 +162,11 @@
   font-size: 10px;
   line-height: 13px;
   margin: 0;
+
+  @include vp-768 {
+    max-width: 202px;
+    padding-right: 45px;
+  }
 }
 
 .booking__button {
@@ -147,4 +177,5 @@
   width: 100%;
   padding: 11px;
   border: none;
+  cursor: pointer;
 }
