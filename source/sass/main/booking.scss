@@ -1,0 +1,150 @@
+.booking {
+  background: 0 -20px / cover no-repeat url("../img/form_bg.jpg");
+}
+
+.booking__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 60px;
+
+  @include vp-1366 {
+    padding: 100px 50px;
+  }
+
+  @include vp-768 {
+    padding: 65px 0;
+  }
+}
+
+.booking__text {
+  max-width: 500px;
+  color: $dark;
+
+  @include vp-1366 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.booking__title {
+  font-family: $ff-bold;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+
+  @include vp-1366 {
+    font-size: 34px;
+    line-height: 51px;
+  }
+
+  @include vp-768 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking__postscript {
+  font-family: $ff-regular;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+
+  @include vp-768 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.booking__request {
+  width: 403px;
+  height: 455px;
+  color: $white;
+  background-color: $dark;
+  padding: 50px;
+
+  @include vp-1366 {
+    margin: 0 auto;
+  }
+
+  @include vp-768 {
+    width: 290px;
+    min-height: 460px;
+  }
+}
+
+.booking__description {
+  font-family: $ff-medium;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 10px;
+  max-width: 360px;
+
+  @include vp-768 {
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+.booking__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.booking__input {
+  padding: 16px;
+  width: 100%;
+  border: none;
+  appearance: none;
+
+  &::placeholder {
+    font-family: $ff-regular;
+    font-size: 14px;
+    color: $dark;
+    opacity: 0.7;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.booking__label--checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking__checkbox-mark {
+  display: block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: $white;
+}
+
+.booking__input-checkbox:checked + .booking__checkbox-mark {
+  background-color: red;
+}
+
+.booking__agreement {
+  font-family: $ff-regular;
+  font-size: 10px;
+  line-height: 13px;
+  margin: 0;
+}
+
+.booking__button {
+  font-family: $ff-semibold;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark;
+  width: 100%;
+  padding: 11px;
+  border: none;
+}

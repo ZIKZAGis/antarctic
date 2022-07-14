@@ -12,7 +12,7 @@
     <header class="header">
       <div class="header__wrapper container">
         <nav class="header__navigation header__navigation--closed header__navigation--nojs">
-          <a class="header__logo-link">
+          <a href="#" class="header__logo-link">
             <img class="header__logo-image" src="img/logo.svg" width="70" height="38" alt="логотип">
           </a>
           <ul class="header__list">
@@ -287,6 +287,47 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="main__booking booking container" id="booking">
+        <div class="booking__wrapper">
+          <div class="booking__text">
+            <h2 class="booking__title">Раннее бронирование</h2>
+            <p class="booking__postscript">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+          </div>
+          <div class="booking__request">
+            <p class="booking__description">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+            <form class="booking__form" action="https://echo.htmlacademy.ru" method="GET">
+              <ul class="booking__list">
+                <li class="booking__item">
+                  <label class="booking__label">
+                    <span class="visually-hidden">Поле ввода имени</span>
+                    <input class="booking__input" type="text" name="имя" placeholder="Имя" required>
+                  </label>
+                </li>
+                <li class="booking__item">
+                  <label class="booking__label">
+                    <span class="visually-hidden">Поле ввода телефона</span>
+                    <input class="booking__input" type="number" name="номер телефона" placeholder="Телефон" required>
+                  </label>
+                </li>
+                <li class="booking__item">
+                  <label class="booking__label">
+                    <span class="visually-hidden">Поле ввода электронной почты</span>
+                    <input class="booking__input" type="email" name="email" placeholder="Email" required>
+                  </label>
+                </li>
+                <li class="booking__item">
+                  <label class="booking__label booking__label--checkbox">
+                    <input class="booking__input-checkbox visually-hidden" type="checkbox" name="Солгласие на обработку данных" checked>
+                    <span class="booking__checkbox-mark"></span>
+                    <p class="booking__agreement">Я согласен на обработку моих персональных данных</p>
+                  </label>
+                </li>
+              </ul>
+              <button class="booking__button" type="submit">Оставить заявку</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
