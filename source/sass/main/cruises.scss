@@ -38,6 +38,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include vp-1366 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
 }
 
 .cruises__item {
@@ -86,13 +97,17 @@
 
 .cruises__item:hover {
   .cruises__info {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding: 70px 25px 35px;
   }
 
   .cruises__title {
     left: 25px;
     top: 35px;
+    bottom: auto;
   }
 
   .cruises__cover {
@@ -103,8 +118,8 @@
 .cruises__sublist {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 0 0 25px;
+  gap: 8px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -126,14 +141,16 @@
   opacity: 0.9;
 }
 
-.cruises__button {
+.cruises__link {
   display: block;
   font-family: $ff-semibold;
   font-size: 14px;
   line-height: 21px;
   width: 100%;
+  text-decoration: none;
   color: $dark;
+  text-align: center;
   background-color: $white;
-  border: none;
-  padding: 14px;
+  padding: 10px;
+  cursor: pointer;
 }
