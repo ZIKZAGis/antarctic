@@ -61,6 +61,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  filter: saturate(120%);
 
   &::before {
     content: "";
@@ -154,4 +155,15 @@
   background-color: $white;
   padding: 10px;
   cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $darkbg;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $darkbg;
+    opacity: 0.5;
+  }
 }

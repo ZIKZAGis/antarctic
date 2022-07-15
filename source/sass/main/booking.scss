@@ -179,4 +179,15 @@
   padding: 11px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $darkbg;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $darkbg;
+    opacity: 0.5;
+  }
 }
