@@ -158,6 +158,6 @@
 
 .header__navigation--opened + .header__welcome {
   @include vp-768 {
-    display: none;
+    padding-top: 112px;
   }
 }

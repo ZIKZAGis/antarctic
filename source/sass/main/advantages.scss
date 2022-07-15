@@ -37,8 +37,8 @@
 }
 
 .advantages__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   list-style: none;
   padding: 0;
@@ -49,14 +49,13 @@
   }
 
   @include vp-768 {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
 .advantages__item {
   position: relative;
   background-color: $white;
-  flex: 1 1 calc((100% / 3) - 2rem);
   padding: 80px 30px 30px;
 
   @include vp-1366 {
