@@ -1,6 +1,23 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
+// Скрипт закрытия и открытия мобильного меню
+
+const headerNavigation = document.querySelector('.header__navigation');
+const headerButton = document.querySelector('.header__button');
+
+headerNavigation.classList.remove('header__navigation--nojs');
+
+headerButton.addEventListener('click', () => {
+  if (headerNavigation.classList.contains('header__navigation--closed')) {
+    headerNavigation.classList.remove('header__navigation--closed');
+    headerNavigation.classList.add('header__navigation--opened');
+  } else {
+    headerNavigation.classList.add('header__navigation--closed');
+    headerNavigation.classList.remove('header__navigation--opened');
+  }
+});
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
