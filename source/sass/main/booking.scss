@@ -25,6 +25,7 @@
 .booking__text {
   max-width: 500px;
   color: $dark;
+  transform: translateY(-4px);
 
   @include vp-1366 {
     max-width: 420px;
@@ -41,7 +42,7 @@
   font-family: $ff-bold;
   font-size: 40px;
   line-height: 60px;
-  margin: 0;
+  margin: 0 0 8px;
 
   @include vp-1366 {
     font-size: 34px;
@@ -73,7 +74,7 @@
   height: 455px;
   color: $white;
   background-color: $dark;
-  padding: 50px;
+  padding: 44px 50px;
 
   @include vp-1366 {
     margin: 0 auto;
@@ -90,7 +91,7 @@
   font-family: $ff-medium;
   font-size: 18px;
   line-height: 27px;
-  margin: 0 0 10px;
+  margin: 0 0 27px;
   max-width: 360px;
 
   @include vp-1366 {
@@ -113,10 +114,12 @@
 }
 
 .booking__input {
-  padding: 16px;
+  font-family: $ff-regular;
+  font-size: 14px;
+  color: $dark;
   width: 100%;
   border: none;
-  appearance: none;
+  padding: 16px 16px 10px;
 
   &::placeholder {
     font-family: $ff-regular;

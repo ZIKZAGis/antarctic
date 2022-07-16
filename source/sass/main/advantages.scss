@@ -5,7 +5,7 @@
 }
 
 .advantages__wrapper {
-  padding: 120px 0;
+  padding: 111px 0 119px;
   color: $dark;
 
   @include vp-1366 {
@@ -22,7 +22,7 @@
   font-size: 28px;
   line-height: 42px;
   text-align: center;
-  margin: 0 0 50px;
+  margin: 0 0 47px;
 
   @include vp-1366 {
     font-size: 26px;
@@ -56,7 +56,7 @@
 .advantages__item {
   position: relative;
   background-color: $white;
-  padding: 80px 30px 30px;
+  padding: 82px 30px 23px;
 
   @include vp-1366 {
     padding: 75px 15px 25px 20px;
@@ -71,7 +71,7 @@
     position: absolute;
     width: 42px;
     height: 42px;
-    top: 20px;
+    top: 25px;
     left: 30px;
   }
 
@@ -100,4 +100,5 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  letter-spacing: normal;
 }

@@ -20,7 +20,7 @@
 
 .footer__logo-link {
   text-decoration: none;
-  margin-right: 29px;
+  margin-right: 22px;
 
   @include vp-1366 {
     margin-right: 15px;
@@ -54,6 +54,8 @@
 .footer__list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 900px;
+  row-gap: 10px;
   margin: 0 auto 0 0;
   padding: 0;
   list-style: none;
@@ -99,6 +101,10 @@
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 200px;
+  column-gap: 8px;
+  transform: translate(8px, 3px);
   margin: 0;
   padding: 0;
   list-style: none;

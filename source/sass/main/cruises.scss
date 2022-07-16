@@ -1,5 +1,5 @@
 .cruises__wrapper {
-  padding: 120px 15px;
+  padding: 112px 15px 120px;
   color: $white;
 
   @include vp-1366 {
@@ -17,7 +17,7 @@
   line-height: 42px;
   color: $dark;
   text-align: center;
-  margin: 0 0 50px;
+  margin: 0 0 48px;
 
   @include vp-1366 {
     font-size: 26px;
@@ -85,7 +85,7 @@
 .cruises__title {
   position: absolute;
   left: 30px;
-  bottom: 30px;
+  bottom: 22px;
   font-family: $ff-medium;
   font-weight: 500;
   font-size: 18px;
