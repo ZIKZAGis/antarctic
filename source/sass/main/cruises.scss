@@ -3,7 +3,7 @@
   color: $white;
 
   @include vp-1366 {
-    padding: 100px 15px;
+    padding: 91px 15px 100px;
   }
 
   @include vp-768 {
@@ -91,6 +91,11 @@
   font-size: 18px;
   line-height: 27px;
   margin: 0;
+
+  @include vp-1366 {
+    left: 35px;
+    bottom: 27px;
+  }
 }
 
 .cruises__info {

@@ -9,7 +9,7 @@
   color: $dark;
 
   @include vp-1366 {
-    padding: 100px 0;
+    padding: 90px 0 100px;
   }
 
   @include vp-768 {
@@ -27,6 +27,7 @@
   @include vp-1366 {
     font-size: 26px;
     line-height: 39px;
+    margin-bottom: 49px;
   }
 
   @include vp-768 {
@@ -59,7 +60,7 @@
   padding: 82px 30px 23px;
 
   @include vp-1366 {
-    padding: 75px 15px 25px 20px;
+    padding: 70px 15px 20px 20px;
   }
 
   @include vp-768 {
@@ -73,6 +74,11 @@
     height: 42px;
     top: 25px;
     left: 30px;
+
+    @include vp-1366 {
+      top: 16px;
+      left: 20px;
+    }
   }
 
   &--liner::before {
@@ -93,6 +99,10 @@
   font-size: 18px;
   line-height: 27px;
   margin: 0 0 10px 0;
+
+  @include vp-1366 {
+    margin-bottom: 6px;
+  }
 }
 
 .advantages__description {

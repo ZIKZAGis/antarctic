@@ -13,7 +13,7 @@
   padding: 50px 60px;
 
   @include vp-1366 {
-    padding: 90px 50px;
+    padding: 92px 50px 100px;
     flex-direction: column;
   }
 
@@ -30,7 +30,7 @@
   @include vp-1366 {
     max-width: 420px;
     text-align: center;
-    margin: 0 auto 46px;
+    margin: 0 auto 48px;
   }
 
   @include vp-768 {
@@ -47,6 +47,7 @@
   @include vp-1366 {
     font-size: 34px;
     line-height: 51px;
+    margin-bottom: 5px;
   }
 
   @include vp-768 {
@@ -61,6 +62,10 @@
   line-height: 27px;
   max-width: 390px;
   margin: 0;
+
+  @include vp-1366 {
+    margin: 0 auto;
+  }
 
   @include vp-768 {
     font-size: 16px;
@@ -95,7 +100,7 @@
   max-width: 360px;
 
   @include vp-1366 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   @include vp-768 {
