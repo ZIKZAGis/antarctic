@@ -7,7 +7,7 @@
   }
 
   @include vp-768 {
-    padding: 65px 10px;
+    padding: 57px 10px 65px;
   }
 }
 
@@ -96,6 +96,11 @@
     left: 35px;
     bottom: 27px;
   }
+
+  @include vp-768 {
+    left: 25px;
+    bottom: 18px;
+  }
 }
 
 .cruises__info {
@@ -109,12 +114,28 @@
     justify-content: space-between;
     height: 100%;
     padding: 70px 25px 35px;
+
+    @include vp-1366 {
+      padding: 70px 35px 35px;
+    }
+
+    @include vp-768 {
+      padding: 70px 25px 35px;
+    }
   }
 
   .cruises__title {
     left: 25px;
-    top: 35px;
+    top: 29px;
     bottom: auto;
+
+    @include vp-1366 {
+      left: 35px;
+    }
+
+    @include vp-1366 {
+      left: 25px;
+    }
   }
 
   .cruises__cover {
@@ -125,7 +146,7 @@
 .cruises__sublist {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;

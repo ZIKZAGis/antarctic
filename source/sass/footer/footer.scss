@@ -70,12 +70,8 @@
 
   @include vp-768 {
     flex-direction: column;
-  }
-}
-
-.footer__item {
-  @include vp-768 {
-    margin-bottom: 20px;
+    gap: 7px;
+    margin-bottom: 10px;
   }
 }
 
@@ -94,7 +90,8 @@
   }
 
   @include vp-768 {
-    padding: 11px 5px 11px 0;
+    display: block;
+    padding: 5px 5px 5px 0;
   }
 
   &:hover {

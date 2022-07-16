@@ -13,9 +13,9 @@
   @include vp-768 {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
     align-items: flex-start;
-    padding: 65px 0;
+    padding: 58px 0 65px;
   }
 }
 
@@ -56,6 +56,10 @@
   line-height: 27px;
   color: $dark;
   margin: 0 0 30px;
+
+  @include vp-768 {
+    margin: 0 0 28px;
+  }
 }
 
 .contacts__address,
