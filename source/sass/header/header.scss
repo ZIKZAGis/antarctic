@@ -71,6 +71,10 @@
 
   @include vp-768 {
     display: none;
+    padding-left: 10px;
+    text-align: left;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -87,6 +91,13 @@
     font-size: 14px;
     line-height: 17px;
     padding: 5px 0;
+  }
+
+  @include vp-768 {
+    color: $dark;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 10px 8px;
   }
 
   &:hover {
@@ -124,73 +135,81 @@
     top: 0;
     z-index: 10;
     background-color: rgba($color: $dark, $alpha: 0.5);
-  }
-}
 
-.header__navigation--opened .header__navigation-wrapper {
-  @include vp-768 {
-    display: block;
-    position: fixed;
-    background-color: $white;
-    width: calc(100% - 35px);
-    height: 100vh;
-    right: 0;
-    padding: 75px 30px 0 15px;
+    .header__navigation-wrapper {
+      display: block;
+      position: fixed;
+      background-color: $white;
+      width: calc(100% - 35px);
+      height: 100vh;
+      right: 0;
+      padding: 75px 30px 0 15px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 15px;
-      top: 20px;
-      width: 42px;
-      height: 22px;
-      background-image: url("../img/logo_dark.svg");
+      &::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        width: 42px;
+        height: 22px;
+        background-image: url("../img/logo_dark.svg");
+      }
     }
-  }
-}
 
-.header__navigation--opened .header__logo-link {
-  @include vp-768 {
-    display: none;
-  }
-}
-
-.header__navigation--opened .header__list {
-  @include vp-768 {
-    display: block;
-    padding-left: 10px;
-    text-align: left;
-  }
-}
-
-.header__navigation--opened .header__item {
-  @include vp-768 {
-    padding: 10px 10px 8px;
-    margin-bottom: 10px;
-  }
-}
-
-.header__navigation--opened .header__link {
-  @include vp-768 {
-    color: $dark;
-    font-size: 18px;
-    line-height: 22px;
-
-    &:active {
-      opacity: 0.5;
+    .header__logo-link {
+      display: none;
     }
-  }
-}
 
-.header__navigation--opened .header__button {
-  @include vp-768 {
-    background: right 15px no-repeat url("../img/close_icon.svg") transparent;
-    border: none;
+    .header__list {
+      display: flex;
+    }
+
+    .header__button {
+      background: right 15px no-repeat url("../img/close_icon.svg") transparent;
+      border: none;
+    }
   }
 }
 
 .header__navigation--opened + .header__welcome {
   @include vp-768 {
     padding-top: 112px;
+  }
+}
+
+.header__navigation--nojs {
+  @include vp-768 {
+    display: block;
+    position: relative;
+
+    .header__navigation-wrapper {
+      display: block;
+      position: relative;
+      background-color: $white;
+      width: calc(100% - 5px);
+      height: fit-content;
+      right: 0;
+      padding: 75px 30px 20px 15px;
+      margin-bottom: 20px;
+      transform: translateX(20px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        width: 42px;
+        height: 22px;
+        background-image: url("../img/logo_dark.svg");
+      }
+    }
+
+    .header__logo-link {
+      display: none;
+    }
+
+    .header__list {
+      display: flex;
+    }
   }
 }
