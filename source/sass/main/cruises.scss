@@ -9,29 +9,56 @@
   @include vp-768 {
     padding: 57px 10px 65px;
   }
-}
 
-.cruises__block-title {
-  font-family: $ff-semibold;
-  font-size: 28px;
-  line-height: 42px;
-  color: $dark;
-  text-align: center;
-  margin: 0 0 48px;
+  h2 {
+    font-family: $ff-semibold;
+    font-size: 28px;
+    line-height: 42px;
+    color: $dark;
+    text-align: center;
+    margin: 0 0 48px;
 
-  @include vp-1366 {
-    font-size: 26px;
-    line-height: 39px;
+    @include vp-1366 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-768 {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 30px;
+    }
   }
 
-  @include vp-768 {
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 30px;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  h3 {
+    position: absolute;
+    left: 30px;
+    bottom: 22px;
+    font-family: $ff-medium;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+
+    @include vp-1366 {
+      left: 35px;
+      bottom: 27px;
+    }
+
+    @include vp-768 {
+      left: 25px;
+      bottom: 18px;
+    }
   }
 }
 
-.cruises__list {
+.cruises__wrapper > ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -49,15 +76,15 @@
     grid-template-columns: 1fr;
     max-width: 550px;
   }
+
+  & > li {
+    position: relative;
+    background-color: $dark;
+    height: 386px;
+  }
 }
 
-.cruises__item {
-  position: relative;
-  background-color: $dark;
-  height: 386px;
-}
-
-.cruises__cover {
+.cruises__wrapper > ul > li > div:first-child {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -76,39 +103,63 @@
   }
 }
 
-.cruises__image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.cruises__title {
-  position: absolute;
-  left: 30px;
-  bottom: 22px;
-  font-family: $ff-medium;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  margin: 0;
-
-  @include vp-1366 {
-    left: 35px;
-    bottom: 27px;
-  }
-
-  @include vp-768 {
-    left: 25px;
-    bottom: 18px;
-  }
-}
-
-.cruises__info {
+.cruises__wrapper > ul > li > div:last-child {
   display: none;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  h4 {
+    font-family: $ff-medium;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  p {
+    font-family: $ff-regular;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  a {
+    display: block;
+    font-family: $ff-semibold;
+    font-size: 14px;
+    line-height: 21px;
+    width: 100%;
+    text-decoration: none;
+    color: $dark;
+    text-align: center;
+    background-color: $white;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+      background-color: $darkbg;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $darkbg;
+      opacity: 0.5;
+    }
+  }
 }
 
-.cruises__item:hover {
-  .cruises__info {
+.cruises__wrapper > ul > li:hover {
+  div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,7 +175,7 @@
     }
   }
 
-  .cruises__title {
+  h3 {
     left: 25px;
     top: 29px;
     bottom: auto;
@@ -138,58 +189,7 @@
     }
   }
 
-  .cruises__cover {
+  div:first-child {
     display: none;
-  }
-}
-
-.cruises__sublist {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cruises__subtitle {
-  font-family: $ff-medium;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin: 0;
-}
-
-.cruises__text-info {
-  font-family: $ff-regular;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin: 0;
-  opacity: 0.9;
-}
-
-.cruises__link {
-  display: block;
-  font-family: $ff-semibold;
-  font-size: 14px;
-  line-height: 21px;
-  width: 100%;
-  text-decoration: none;
-  color: $dark;
-  text-align: center;
-  background-color: $white;
-  padding: 10px;
-  cursor: pointer;
-
-  &:hover {
-    color: $white;
-    background-color: $darkbg;
-  }
-
-  &:active {
-    color: $white;
-    background-color: $darkbg;
-    opacity: 0.5;
   }
 }

@@ -19,18 +19,6 @@
   }
 }
 
-.contacts__info {
-  padding-left: 60px;
-
-  @include vp-1366 {
-    padding: 0;
-  }
-
-  @include vp-768 {
-    order: 0;
-  }
-}
-
 .contacts__map-wrapper {
   height: 306px;
 
@@ -51,55 +39,67 @@
   border: none;
 }
 
-.contacts__title {
-  font-family: $ff-medium;
-  font-size: 18px;
-  line-height: 27px;
-  color: $dark;
-  margin: 0 0 30px;
+.contacts__info {
+  padding-left: 60px;
+
+  @include vp-1366 {
+    padding: 0;
+  }
 
   @include vp-768 {
-    margin: 0 0 28px;
-  }
-}
-
-.contacts__address,
-.contacts__number {
-  position: relative;
-  font-family: $ff-regular;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: $dark;
-  text-decoration: none;
-  margin: 0 0 20px;
-  padding-left: 28px;
-  letter-spacing: normal;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 22px;
-    height: 22px;
-    left: 0;
-    top: 0;
-  }
-}
-
-.contacts__number {
-  &:hover {
-    opacity: 0.7;
+    order: 0;
   }
 
-  &:active {
-    opacity: 0.5;
+  p {
+    font-family: $ff-medium;
+    font-size: 18px;
+    line-height: 27px;
+    color: $dark;
+    margin: 0 0 30px;
+
+    @include vp-768 {
+      margin: 0 0 28px;
+    }
   }
-}
 
-.contacts__address::before {
-  background: left top no-repeat url("../img/location.svg");
-}
+  address,
+  a {
+    position: relative;
+    font-family: $ff-regular;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark;
+    text-decoration: none;
+    margin: 0 0 20px;
+    padding-left: 28px;
+    letter-spacing: normal;
 
-.contacts__number::before {
-  background: left top no-repeat url("../img/phone.svg");
+    &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  address::before {
+    background: left top no-repeat url("../img/location.svg");
+  }
+
+  a::before {
+    background: left top no-repeat url("../img/phone.svg");
+  }
 }
