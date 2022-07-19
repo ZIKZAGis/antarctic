@@ -1,10 +1,10 @@
 .header {
   flex: 0 0 auto;
+  background: center / cover no-repeat url("../img/greeting_bg.jpg") $darkbg;
 }
 
 .header__wrapper {
   min-height: 650px;
-  background: center / cover no-repeat url("../img/greeting_bg.jpg") $darkbg;
 
   @include vp-1366 {
     min-height: 638px;

@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 60px;
+  padding: 50px 163px;
 
   @include vp-1366 {
     padding: 92px 50px 100px;
@@ -185,7 +185,7 @@
     align-items: center;
     justify-content: space-between;
 
-    span:nth-child(2) {
+    span:nth-child(2n) {
       display: block;
       position: relative;
       width: 18px;
@@ -194,7 +194,7 @@
     }
   }
 
-  input[type="checkbox"]:checked + span:nth-child(2)::before {
+  input[type="checkbox"]:checked + span:nth-child(2n)::before {
     content: "";
     display: block;
     position: absolute;
@@ -203,7 +203,7 @@
     background: center no-repeat url("../img/check_mark.svg");
   }
 
-  span:nth-child(3) {
+  span:nth-child(3n) {
     font-family: $ff-regular;
     font-size: 10px;
     line-height: 13px;

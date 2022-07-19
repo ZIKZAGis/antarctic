@@ -5,7 +5,7 @@
 }
 
 .advantages__wrapper {
-  padding: 111px 0 119px;
+  padding: 111px 103px 119px;
   color: $dark;
 
   @include vp-1366 {
@@ -81,15 +81,15 @@
       }
     }
 
-    &:nth-child(1)::before {
+    &:nth-child(1n)::before {
       background: left center no-repeat url("../img/liner.svg") transparent;
     }
 
-    &:nth-child(2)::before {
+    &:nth-child(2n)::before {
       background: left center no-repeat url("../img/all_inclusive.svg") transparent;
     }
 
-    &:nth-child(3)::before {
+    &:nth-child(3n)::before {
       background: left center no-repeat url("../img/zodiac.svg") transparent;
     }
   }
