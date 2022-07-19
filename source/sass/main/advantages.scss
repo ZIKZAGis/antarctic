@@ -9,11 +9,11 @@
   color: $dark;
 
   @include vp-1366 {
-    padding: 90px 0 100px;
+    padding: 90px 45px 100px;
   }
 
   @include vp-768 {
-    padding: 57px 0 64px;
+    padding: 57px 15px 64px;
   }
 
   h2 {
