@@ -1,10 +1,16 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
-// Скрипт закрытия и открытия мобильного меню
-
 const headerNavigation = document.querySelector('.header__navigation');
 const headerButton = document.querySelector('.header__button');
+const links = Array.from(document.querySelectorAll('.header__list a'));
+
+// const wrapper = document.querySelector('.header__navigation-wrapper');
+// document.addEventListener('click', (e) => {
+//   if (e.target !== wrapper) {
+//     toogle();
+//   }
+// });
 
 headerNavigation.classList.remove('header__navigation--nojs');
 
@@ -18,7 +24,15 @@ const toogle = () => {
   }
 };
 
-headerButton.addEventListener('click', toogle);
+const menuSwitch = () => {
+  headerButton.addEventListener('click', toogle);
+
+  links.forEach(function (e) {
+    e.addEventListener('click', toogle);
+  });
+};
+
+menuSwitch();
 
 // ---------------------------------
 

@@ -56,7 +56,7 @@
 .footer__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 550px;
+  max-width: 630px;
   row-gap: 10px;
   margin: 0 auto 0 0;
   padding: 0;
@@ -106,7 +106,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   max-width: 200px;
-  column-gap: 8px;
+  column-gap: 10px;
   transform: translate(8px, 3px);
   margin: 0;
   padding: 0;
@@ -127,7 +127,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38px;
+  width: 36px;
   height: 38px;
 
   @include vp-1366 {
