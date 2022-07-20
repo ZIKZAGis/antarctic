@@ -1,5 +1,5 @@
 .booking {
-  background: 0 -20px / cover no-repeat url("../img/form_bg.jpg");
+  background: 0 -20px / cover no-repeat url("../img/form_bg.jpg") $lightbg;
 
   @include vp-1366 {
     background-position: center;
@@ -18,7 +18,7 @@
   }
 
   @include vp-768 {
-    padding: 63px 0 65px;
+    padding: 63px 15px 65px;
   }
 }
 
@@ -87,7 +87,8 @@
   }
 
   @include vp-768 {
-    width: 290px;
+    width: 100%;
+    min-width: 290px;
     min-height: 460px;
     padding: 35px 30px;
   }

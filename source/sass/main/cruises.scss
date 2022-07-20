@@ -109,6 +109,8 @@
   ul {
     display: flex;
     flex-direction: column;
+    max-height: 240px;
+    overflow: scroll;
     gap: 12px;
     margin: 0;
     padding: 0;
@@ -192,4 +194,8 @@
   div:first-child {
     display: none;
   }
+}
+
+.cruises__wrapper > ul > li > div:last-child ul::-webkit-scrollbar {
+  width: 0;
 }

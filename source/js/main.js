@@ -8,15 +8,17 @@ const headerButton = document.querySelector('.header__button');
 
 headerNavigation.classList.remove('header__navigation--nojs');
 
-headerButton.addEventListener('click', () => {
-  if (headerNavigation.classList.contains('header__navigation--closed')) {
-    headerNavigation.classList.remove('header__navigation--closed');
-    headerNavigation.classList.add('header__navigation--opened');
+const toogle = () => {
+  headerNavigation.classList.toggle('header__navigation--closed');
+  headerNavigation.classList.toggle('header__navigation--opened');
+  if (headerNavigation.classList.contains('header__navigation--opened')) {
+    document.querySelector('body').style.overflow = 'hidden';
   } else {
-    headerNavigation.classList.add('header__navigation--closed');
-    headerNavigation.classList.remove('header__navigation--opened');
+    document.querySelector('body').style.overflow = 'scroll';
   }
-});
+};
+
+headerButton.addEventListener('click', toogle);
 
 // ---------------------------------
 
