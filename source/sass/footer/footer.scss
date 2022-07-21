@@ -62,6 +62,10 @@
   padding: 0;
   list-style: none;
 
+  @include vp-1024 {
+    max-width: 598px;
+  }
+
   @include vp-1366 {
     max-width: 460px;
   }

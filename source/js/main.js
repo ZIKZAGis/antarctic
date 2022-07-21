@@ -3,16 +3,11 @@ import {initModals} from './modules/modals/init-modals';
 
 const headerNavigation = document.querySelector('.header__navigation');
 const headerButton = document.querySelector('.header__button');
+// const wrapper = document.querySelector('.header__navigation-wrapper');
 const links = Array.from(document.querySelectorAll('.header__list a'));
 
-// const wrapper = document.querySelector('.header__navigation-wrapper');
-// document.addEventListener('click', (e) => {
-//   if (e.target !== wrapper) {
-//     toogle();
-//   }
-// });
-
 headerNavigation.classList.remove('header__navigation--nojs');
+
 
 const toogle = () => {
   headerNavigation.classList.toggle('header__navigation--closed');
