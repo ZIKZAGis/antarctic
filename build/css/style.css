@@ -632,16 +632,29 @@ img {
   opacity: 0.5;
 }
 
+.booking__request li:last-child {
+  position: relative;
+}
+
+.booking__request li:last-child input {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+}
+
 .booking__request li:last-child label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 18px 1fr;
+  grid-template-columns: 18px 1fr;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  gap: 5px;
 }
 
 .booking__request li:last-child label span:nth-child(2n) {
@@ -654,10 +667,9 @@ img {
 
 .booking__request li:last-child input[type="checkbox"]:checked + span:nth-child(2n)::before {
   content: "";
-  display: block;
   position: absolute;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   background: center no-repeat url("../img/check_mark.svg");
 }
 
@@ -670,7 +682,6 @@ img {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 10px;
   line-height: 13px;
-  max-width: 280px;
   margin: 0;
 }
 
@@ -785,7 +796,11 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+<<<<<<< HEAD
   max-width: 550px;
+=======
+  max-width: 630px;
+>>>>>>> b4bebcd186cf3ffa6d6d257e86c2550593fe87c2
   row-gap: 10px;
   margin: 0 auto 0 0;
   padding: 0;
@@ -819,9 +834,9 @@ img {
   -ms-flex-pack: end;
   justify-content: flex-end;
   max-width: 200px;
-  -webkit-column-gap: 8px;
-  -moz-column-gap: 8px;
-  column-gap: 8px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
   -webkit-transform: translate(8px, 3px);
   -ms-transform: translate(8px, 3px);
   transform: translate(8px, 3px);
@@ -840,7 +855,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 38px;
+  width: 36px;
   height: 38px;
 }
 
@@ -1376,9 +1391,20 @@ img {
     padding-bottom: 10px;
   }
 
-  .booking__request li:last-child span:nth-child(3n) {
-    max-width: 202px;
-    padding-right: 45px;
+  .booking__request li:last-child label {
+    -ms-grid-columns: 20px 1fr;
+    grid-template-columns: 20px 1fr;
+    gap: 8px;
+  }
+
+  .booking__request li:last-child label span:nth-child(2n) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .booking__request li:last-child input[type="checkbox"]:checked + span:nth-child(2n)::before {
+    width: 20px;
+    height: 20px;
   }
 
   .contacts__wrapper {

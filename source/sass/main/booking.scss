@@ -181,10 +181,28 @@
 }
 
 .booking__request li:last-child {
+  position: relative;
+
+  input {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+  }
+
   label {
-    display: flex;
+    display: grid;
+    grid-template-columns: 18px 1fr;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
+
+    @include vp-768 {
+      grid-template-columns: 20px 1fr;
+      gap: 8px;
+    }
 
     span:nth-child(2n) {
       display: block;
@@ -192,16 +210,25 @@
       width: 18px;
       height: 18px;
       background-color: $white;
+
+      @include vp-768 {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
   input[type="checkbox"]:checked + span:nth-child(2n)::before {
     content: "";
-    display: block;
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     background: center no-repeat url("../img/check_mark.svg");
+
+    @include vp-768 {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   input[type="checkbox"]:focus + span:nth-child(2n)::before {
@@ -213,12 +240,6 @@
     font-family: $ff-regular;
     font-size: 10px;
     line-height: 13px;
-    max-width: 280px;
     margin: 0;
-
-    @include vp-768 {
-      max-width: 202px;
-      padding-right: 45px;
-    }
   }
 }
