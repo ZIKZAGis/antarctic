@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 
 const headerNavigation = document.querySelector('.header__navigation');
 const headerButton = document.querySelector('.header__button');
-// const wrapper = document.querySelector('.header__navigation-wrapper');
 const links = Array.from(document.querySelectorAll('.header__list a'));
 
 headerNavigation.classList.remove('header__navigation--nojs');
