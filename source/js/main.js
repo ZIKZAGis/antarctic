@@ -7,14 +7,15 @@ const links = Array.from(document.querySelectorAll('.header__list a'));
 
 headerNavigation.classList.remove('header__navigation--nojs');
 
-
 const toogle = () => {
-  headerNavigation.classList.toggle('header__navigation--closed');
-  headerNavigation.classList.toggle('header__navigation--opened');
-  if (headerNavigation.classList.contains('header__navigation--opened')) {
-    document.querySelector('body').style.overflow = 'hidden';
-  } else {
-    document.querySelector('body').style.overflow = 'scroll';
+  if (window.innerWidth <= 767) {
+    headerNavigation.classList.toggle('header__navigation--closed');
+    headerNavigation.classList.toggle('header__navigation--opened');
+    if (headerNavigation.classList.contains('header__navigation--opened')) {
+      document.querySelector('body').style.overflow = 'hidden';
+    } else {
+      document.querySelector('body').style.overflow = 'scroll';
+    }
   }
 };
 
