@@ -7,12 +7,21 @@ const links = Array.from(document.querySelectorAll('.header__list a'));
 
 headerNavigation.classList.remove('header__navigation--nojs');
 
+const tapOverlay = (e) => {
+  if (e.target === headerNavigation) {
+    headerNavigation.classList.toggle('header__navigation--closed');
+    headerNavigation.classList.toggle('header__navigation--opened');
+    document.querySelector('body').style.overflow = 'scroll';
+  }
+};
+
 const toogle = () => {
   if (window.innerWidth <= 767) {
     headerNavigation.classList.toggle('header__navigation--closed');
     headerNavigation.classList.toggle('header__navigation--opened');
     if (headerNavigation.classList.contains('header__navigation--opened')) {
       document.querySelector('body').style.overflow = 'hidden';
+      document.addEventListener('click', tapOverlay);
     } else {
       document.querySelector('body').style.overflow = 'scroll';
     }
