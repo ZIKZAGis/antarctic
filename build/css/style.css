@@ -352,7 +352,7 @@ img {
 .cruises__wrapper h3 {
   position: absolute;
   left: 30px;
-  bottom: 22px;
+  bottom: 25px;
   font-family: "Montserrat Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -576,7 +576,7 @@ img {
   color: #011c40;
   width: 100%;
   border: none;
-  padding: 16px 16px 10px;
+  padding: 16px 16px 11px;
 }
 
 .booking__request input::-webkit-input-placeholder {
@@ -1006,7 +1006,7 @@ img {
 
   .cruises__wrapper h3 {
     left: 35px;
-    bottom: 27px;
+    bottom: 30px;
   }
 
   .cruises__wrapper > ul {
@@ -1028,11 +1028,6 @@ img {
   .cruises__wrapper > ul > li:hover h3,
   .cruises__wrapper > ul > li:focus-within h3 {
     left: 35px;
-  }
-
-  .cruises__wrapper > ul > li:hover h3,
-  .cruises__wrapper > ul > li:focus-within h3 {
-    left: 25px;
   }
 
   .booking {
@@ -1068,7 +1063,7 @@ img {
   }
 
   .booking__request > p {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 
   .booking__request input {
@@ -1358,7 +1353,7 @@ img {
 
   .cruises__wrapper h3 {
     left: 25px;
-    bottom: 18px;
+    bottom: 20px;
   }
 
   .cruises__wrapper > ul {
@@ -1375,6 +1370,11 @@ img {
     padding: 70px 25px 35px;
   }
 
+  .cruises__wrapper > ul > li:hover h3,
+  .cruises__wrapper > ul > li:focus-within h3 {
+    left: 25px;
+  }
+
   .booking__wrapper {
     padding: 63px 15px 65px;
   }
@@ -1386,7 +1386,7 @@ img {
   .booking__text h2 {
     font-size: 24px;
     line-height: 31px;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
   }
 
   .booking__text p {
@@ -1410,7 +1410,8 @@ img {
   }
 
   .booking__request ul {
-    margin: 0 0 25px;
+    margin: 0 0 27px;
+    gap: 20px;
   }
 
   .booking__request input {
