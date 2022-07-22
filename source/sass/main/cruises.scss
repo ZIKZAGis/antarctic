@@ -72,13 +72,11 @@
 
   @include vp-1366 {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1120px;
     margin: 0 auto;
   }
 
   @include vp-768 {
     grid-template-columns: 1fr;
-    max-width: 550px;
   }
 
   & > li {

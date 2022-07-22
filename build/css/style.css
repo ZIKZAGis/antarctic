@@ -356,9 +356,8 @@ img {
   font-family: "Montserrat Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  line-height: 27px;
   margin: 0;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .cruises__wrapper > ul {
@@ -375,10 +374,14 @@ img {
 .cruises__wrapper > ul > li {
   position: relative;
   background-color: #011c40;
-  height: 386px;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 145%;
 }
 
 .cruises__wrapper > ul > li > div:first-child {
+  position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -412,7 +415,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-height: 240px;
+  max-height: 85%;
   overflow: scroll;
   gap: 12px;
   margin: 0;
@@ -447,7 +450,7 @@ img {
   color: #011c40;
   text-align: center;
   background-color: #f9fbfd;
-  padding: 10px;
+  padding: 10px 5px;
   cursor: pointer;
 }
 
@@ -467,6 +470,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1006,8 +1012,12 @@ img {
   .cruises__wrapper > ul {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1120px;
     margin: 0 auto;
+  }
+
+  .cruises__wrapper > ul > li {
+    padding-top: 0;
+    padding-bottom: 125%;
   }
 
   .cruises__wrapper > ul > li:hover div:last-child,
@@ -1309,6 +1319,7 @@ img {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+    height: 100%;
   }
 
   .advantages__wrapper {
@@ -1353,7 +1364,10 @@ img {
   .cruises__wrapper > ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    max-width: 550px;
+  }
+
+  .cruises__wrapper > ul > li {
+    padding-bottom: 143%;
   }
 
   .cruises__wrapper > ul > li:hover div:last-child,
