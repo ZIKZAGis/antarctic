@@ -43,9 +43,8 @@
     font-family: $ff-medium;
     font-weight: 500;
     font-size: 18px;
-    line-height: 27px;
     margin: 0;
-    padding-right: 20px;
+    padding-right: 30px;
 
     @include vp-1366 {
       left: 35px;
@@ -85,11 +84,24 @@
   & > li {
     position: relative;
     background-color: $dark;
-    height: 386px;
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 145%;
+
+    @include vp-1366 {
+      padding-top: 0;
+      padding-bottom: 125%;
+    }
+
+    @include vp-768 {
+      padding-bottom: 143%;
+    }
   }
 }
 
 .cruises__wrapper > ul > li > div:first-child {
+  position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -114,7 +126,7 @@
   ul {
     display: flex;
     flex-direction: column;
-    max-height: 240px;
+    max-height: 85%;
     overflow: scroll;
     gap: 12px;
     margin: 0;
@@ -149,7 +161,7 @@
     color: $dark;
     text-align: center;
     background-color: $white;
-    padding: 10px;
+    padding: 10px 5px;
     cursor: pointer;
 
     &:hover {
@@ -169,6 +181,9 @@
 .cruises__wrapper > ul > li:focus-within {
   div:last-child {
     display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
